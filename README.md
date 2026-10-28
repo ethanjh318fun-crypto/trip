@@ -10,5 +10,3 @@ This is my snake game I am working on.It is still in its ALPHA stages, but in a 
 2031	  Project management and add community suggestions as prior
 
 I will listen to fan suggestions, but to play the actual game you must use the index,html file, but download the other files with it, so that it works correctly.
-
-https://www.patreon.com/cw/Somecodestuff
