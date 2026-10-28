@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game X</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Snake Game X</p>
+          <h1>Challenge Arena</h1>
+        </div>
+        <div class="controls">
+          <button id="startBtn">Start</button>
+          <button id="pauseBtn" class="secondary">Pause</button>
+          <button id="challengeBtn" class="accent">Challenge Mode</button>
+        </div>
+      </header>
+
+      <section class="hud">
+        <div class="stat">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat">
+          <span>Best</span>
+          <strong id="best">0</strong>
+        </div>
+        <div class="stat">
+          <span>Mode</span>
+          <strong id="modeLabel">Normal</strong>
+        </div>
+        <div class="stat power">
+          <span>Power-up</span>
+          <strong id="powerLabel">None</strong>
+        </div>
+      </section>
+
+      <main class="game-wrap">
+        <canvas id="gameCanvas" width="600" height="600" aria-label="Snake game board"></canvas>
+      </main>
+
+      <section class="info-panel">
+        <div>
+          <h2>Controls</h2>
+          <p>Use arrow keys or WASD to move.</p>
+        </div>
+        <div>
+          <h2>Power-ups</h2>
+          <p>Shield, Magnet, Slow-mo, Double score.</p>
+        </div>
+        <div>
+          <h2>Challenge</h2>
+          <p>Every 15s a block appears. Every 45s an AI snake joins the arena.</p>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
