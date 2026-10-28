@@ -13,12 +13,21 @@
           <p class="eyebrow">Snake Game X</p>
           <h1>Challenge Arena</h1>
         </div>
-        <div class="controls">
-          <button id="startBtn">Start</button>
-          <button id="pauseBtn" class="secondary">Pause</button>
-          <button id="challengeBtn" class="accent">Challenge Mode</button>
+        <div class="header-controls">
+          <span id="glassBadge" class="glass-badge hidden">Glass Mode Active</span>
+          <div class="controls">
+            <button id="modeSelectBtn" class="secondary">Mode Select</button>
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn" class="secondary">Pause</button>
+          </div>
         </div>
       </header>
+
+      <div id="modePanel" class="mode-panel hidden">
+        <button class="mode-option active" data-mode="default">Default</button>
+        <button class="mode-option" data-mode="challenge">Challenge</button>
+        <button class="mode-option" data-mode="easy">Easy</button>
+      </div>
 
       <section class="hud">
         <div class="stat">
@@ -31,7 +40,7 @@
         </div>
         <div class="stat">
           <span>Mode</span>
-          <strong id="modeLabel">Normal</strong>
+          <strong id="modeLabel">Default</strong>
         </div>
         <div class="stat power">
           <span>Power-up</span>
@@ -64,6 +73,19 @@
       </section>
     </div>
 
+    <div id="startOverlay" class="start-overlay">
+      <div class="start-panel">
+        <p class="eyebrow">Snake Game X</p>
+        <h2>Choose Your Mode</h2>
+        <div class="start-mode-list">
+          <button class="start-mode-button active" data-start-mode="default">Default</button>
+          <button class="start-mode-button" data-start-mode="challenge">Challenge</button>
+          <button class="start-mode-button" data-start-mode="easy">Easy</button>
+        </div>
+        <button id="playBtn" class="primary-btn">Play</button>
+      </div>
+    </div>
+
     <div id="pauseOverlay" class="pause-overlay hidden" aria-live="polite">
       <div class="pause-panel">
         <h2>Paused</h2>
@@ -73,6 +95,8 @@
         </div>
       </div>
     </div>
+
+    <div id="toast" class="status-toast hidden" aria-live="polite"></div>
 
     <script src="script.js"></script>
   </body>
