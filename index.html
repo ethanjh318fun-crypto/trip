@@ -39,6 +39,11 @@
         </div>
       </section>
 
+      <div class="redeem-box">
+        <input id="redeemInput" type="text" maxlength="24" placeholder="Redeem code" aria-label="Redeem code" />
+        <button id="redeemBtn" class="secondary">Redeem</button>
+      </div>
+
       <main class="game-wrap">
         <canvas id="gameCanvas" width="600" height="600" aria-label="Snake game board"></canvas>
       </main>
@@ -57,6 +62,16 @@
           <p>Every 15s a block appears. Every 45s an AI snake joins the arena.</p>
         </div>
       </section>
+    </div>
+
+    <div id="pauseOverlay" class="pause-overlay hidden" aria-live="polite">
+      <div class="pause-panel">
+        <h2>Paused</h2>
+        <div class="pause-actions">
+          <button id="resumeBtn">Resume</button>
+          <button id="restartBtn" class="secondary">Restart</button>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
